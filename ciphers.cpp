@@ -10,7 +10,7 @@ int main() {
     std::string text;
 
     std::cout << "Please enter the text you want to encrypt or decrypt." << std::endl;
-    std::cin >> text;
+    std::getline(std::cin, text);
 
     std::cout << "Please select the type of cipher you want to use." << std::endl;
     std::cout << "(The Caesar and Atbash Ciphers use the same formula for encryption and decryption.)" << std::endl;
@@ -22,7 +22,7 @@ int main() {
     // add exception handling for invalid cipher number being selected (unless switch statement is fine?)?
 
     std::string result;
-    
+
     switch(cipher) {
     case 1:
         result = caesar(text);
